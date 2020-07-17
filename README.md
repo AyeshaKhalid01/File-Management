@@ -8,5 +8,8 @@ running the file it will prompt for user Input to select a feature they want to 
 1. FIXME Log 
 2. File Size List 
 3. File Type Count 
-4. Word and Vowel Count 
-5. Palindrome log 
+4. Word and Vowel Count
+5. Word and Vowel Count
+6. Palindrome log 
+7. Switch to Executable
+8. Backup and Delete / Restore
