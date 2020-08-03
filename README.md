@@ -27,3 +27,19 @@ echo "$file" >> fixme.log fi
 ``` 
 After looping through the files the program checks if the last line of the file has #FIXME by using egrep, the "e" is for regular expressions. If it is true then the file
 name is appended to fixme.log. 
+**Execution**: When asked by the program, enter the corresponding number which is, 1, for the FIXME feature. There will be no explicit output 
+since the names are in the file fixme.log. However, if you do cat fixme.log it will output the names of the file.
+## Feature 2- Find Tag
+### Description
+- The feature prompts the user to input a single word, this word is referred to as the Tag. The program then looks through all python files in the repository, to 
+find comments that include the Tag within it. - The comments are then printed to a file called Tag.log where Tag is the user input. If the Tag.log file already 
+exits, it is overwritten. - One of the pitfalls that had just like the above feature is that you have to account for special characters in the file name but that 
+was fixed by doing `IFS=$'\n'`. 
+
+```bash 
+commentPy=`cat "$f" | grep '^#' | grep "$userInput"` echo "$commentPy" >> "$userInput".log 
+``` 
+After looping through all python files, cat is used to go through a file sequentially, and grep is used to first find all comments and then find comments with the Tag.
+ 
+**Execution**: When asked by the program, enter the corresponding number which is, 2, for the Find Tag feature. There will be no explicit output since the names are 
+in the file Tag.log since the comments are echoed . However, if you do cat Tag.log it will output the comments on to the file.
