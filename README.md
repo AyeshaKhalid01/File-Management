@@ -43,3 +43,14 @@ After looping through all python files, cat is used to go through a file sequent
  
 **Execution**: When asked by the program, enter the corresponding number which is, 2, for the Find Tag feature. There will be no explicit output since the names are 
 in the file Tag.log since the comments are echoed . However, if you do cat Tag.log it will output the comments on to the file.
+
+## Feature 3 - File Type Count
+### Description
+- The feature prompts the user to input a file extension and the program then finds all files with that extension. It then finds all files with that extension in 
+the repository. - The program then keeps count of the number of files there are with that extension and outputs the number at the end. 
+```bash 
+count=$( find .. -name "*.$extension" -type f | wc -l ) 
+``` 
+The program uses find so it recursively looks through all the directories and sub directories to find files with that  extension, all the files are then added up 
+to get a total.
+**Execution**:  When asked by the program, enter the corresponding number which is, 3, for the file count feature. Make sure to enter the extension **without** putting "." and simply entering "py" or any other extension.
